@@ -1,0 +1,11 @@
+I"œ<h1 id="post-sample">post-sample</h1>
+<blockquote>
+  <p>css</p>
+</blockquote>
+
+<p>This is code</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.a</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,14 @@
+I"�<h1 id="post-sample">post-sample</h1>
+<blockquote>
+  <p>python</p>
+</blockquote>
+
+<p>This is code</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 한줄 주석
+</span><span class="s">"""여러줄 주석"""</span>
+
+<span class="c1"># List
+</span><span class="n">car</span> <span class="o">=</span> <span class="p">[</span><span class="s">'k5'</span><span class="p">,</span> <span class="s">'white'</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">car</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+:ET
