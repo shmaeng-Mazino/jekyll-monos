@@ -1,0 +1,13 @@
+I";<h1 id="intro">INTRO</h1>
+<p>안녕하세요 Mazino 입니다. ‘  ‘이번에 알고리즘 공부를 하면서 파이썬으로 되어 있는 강의를
+보기위해서</p>
+
+<p>This is code</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 한줄 주석
+</span><span class="s">"""여러줄 주석"""</span>
+
+<span class="c1"># List
+</span><span class="n">car</span> <span class="o">=</span> <span class="p">[</span><span class="s">'k5'</span><span class="p">,</span> <span class="s">'white'</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">car</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+:ET
