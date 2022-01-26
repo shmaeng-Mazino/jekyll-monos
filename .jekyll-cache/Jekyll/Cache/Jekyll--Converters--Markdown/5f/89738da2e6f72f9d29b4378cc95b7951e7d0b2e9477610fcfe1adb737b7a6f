@@ -1,163 +1,131 @@
----
-layout: post
-title: html css 기초
-date: 2021-01-26 22:00:00 +0900
-category: html css
----
-html css basic
-===========
+I"�<h1 id="html-css-basic">html css basic</h1>
 
--  자주 사용
-
-```css
-font-size : 20px;
-font-family : 'gulim';
-color : black;
-letter-spacing : -1px;
-text-align : center;
-font-weight : 600;
-```
-
----
-
-- 이미지 정렬과 폭 조정
-
-
-```css
-display : block;
-margin-left : auto;
-margin-right : auto;
-width : 150px;
-```
-
-텍스트의 일부만 스타일을 변경하고 싶을 때 
-`<span>` 이라는 태그로 감싼 뒤에 스타일을 주면 됩니다. 
-`<span>` 태그는 가끔 글자 일부를 싸매고 싶을 때 사용하는 큰 의미없는 태그입니다. 
-`<strong>` 태그로 글자 일부를 싸매면 간단히 굵게 표현도 가능합니다.
+<ul>
+  <li>자주 사용
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">font-size</span> <span class="o">:</span> <span class="err">20</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">font-family</span> <span class="o">:</span> <span class="s2">'gulim'</span><span class="o">;</span>
+<span class="nt">color</span> <span class="o">:</span> <span class="nt">black</span><span class="o">;</span>
+<span class="nt">letter-spacing</span> <span class="o">:</span> <span class="nt">-1px</span><span class="o">;</span>
+<span class="nt">text-align</span> <span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">font-weight</span> <span class="o">:</span> <span class="err">600</span><span class="o">;</span>
+</code></pre></div>    </div>
+    <hr />
+  </li>
+  <li>이미지 정렬과 폭 조정
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">display</span> <span class="o">:</span> <span class="nt">block</span><span class="o">;</span>
+<span class="nt">margin-left</span> <span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
+<span class="nt">margin-right</span> <span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
+<span class="nt">width</span> <span class="o">:</span> <span class="err">150</span><span class="nt">px</span><span class="o">;</span>
+</code></pre></div>    </div>
+    <p>텍스트의 일부만 스타일을 변경하고 싶을 때 
+<code class="highlighter-rouge">&lt;span&gt;</code> 이라는 태그로 감싼 뒤에 스타일을 주면 됩니다. 
+<span> 태그는 가끔 글자 일부를 싸매고 싶을 때 사용하는 큰 의미없는 태그입니다. 
+<strong> 태그로 글자 일부를 싸매면 간단히 굵게 표현도 가능합니다.
 (참고) span 태그는 display : inline 이라는 스타일 속성을 내포하고 있으며,
 display : inline을 가지고 있는 요소는 폭, 높이 등을 단독으로 결정할 수 없습니다
-폭, 높이를 주고싶으면 얘를 감싸고 있는 `<p>`에 주십시오
+폭, 높이를 주고싶으면 얘를 감싸고 있는 &lt;p&gt;에 주십시오
+—</strong></span></p>
+  </li>
+  <li>HTML에 첨부
+```html</li>
+</ul>
+<link href="css파일경로" rel="stylesheet" />
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	&lt;head&gt;태그 안에 &lt;link&gt;태그를 넣으시고
+	href라는 속성에 여러분의 .css 파일 경로를 지정해놓으면 css 파일 이용가능합니다. 
 ---
-
-- HTML에 첨부
-
-```html
-<link href="css파일경로" rel="stylesheet">
-```
-
-`<head>`태그 안에 `<link>`태그를 넣으시고
-href라는 속성에 여러분의 .css 파일 경로를 지정해놓으면 css 파일 이용가능합니다. 
-
----
-
 - CSS selector
-
 ```css
 p { font-size : 16px } /*태그*/
 .profile { font-size : 20px }  /*클래스*/
 #special { font-size : 30px } /*아이디*/
-```
+</code></pre></div></div>
+<hr />
+<ul>
+  <li>셀렉터의 우선순위
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">style</span><span class="o">=</span><span class="s1">""</span> <span class="o">(</span><span class="err">1000</span><span class="nt">점</span><span class="o">)</span>
+<span class="nf">#id</span> <span class="o">(</span><span class="err">100</span><span class="nt">점</span><span class="o">)</span>
+<span class="nc">.class</span> <span class="o">(</span><span class="err">10</span><span class="nt">점</span><span class="o">)</span> 
+<span class="nt">p</span> <span class="o">(</span><span class="err">1</span><span class="nt">점</span><span class="o">)</span> 
+</code></pre></div>    </div>
+  </li>
+</ul>
 
----
+<h1 id="css-layout">CSS Layout</h1>
+<h3 id="div-style">div style</h3>
 
-- 셀렉터의 우선순위
+<ul>
+  <li>네모 박스 디자인에 많이 사용하는 CSS 속성
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+<span class="nl">margin</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span> 
+<span class="nl">padding</span> <span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="nl">border</span> <span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="nl">border-radius</span> <span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
 
-```css
-style="" (1000점)
-#id (100점)
-.class (10점) 
-p (1점) 
-```
-
-CSS Layout
-===
-
-- 네모 박스 디자인에 많이 사용하는 CSS 속성
-
-```css
-.box {
-  margin : 20px; 
-  padding : 30px;
-  border : 1px solid black;
-  border-radius : 5px;
-}
-```
-
-margin은 바깥 여백,
-padding은 안쪽 여백,
-border는 테두리 (차례로 두께, 선의 종류, 색상),
-border-radius는 테두리 둥글게 처리입니다. 
-가운데 정렬 
-	display : block;
-	margin-left : auto;
-	margin-right : auto 
-	이렇게 주면 됩니다. 
-
----
-
-- margin과 padding을 원하는 방향에만 줄 수 있습니다.
-
-```css
-.box {
-  margin-top : 20px;
-  padding-left : 30px; 
-}
-```
-
-top, left, bottom, right 중 원하는 곳에만 여백을 줄 수 있습니다. 
-(참고) margin은 음수도 가능합니다. -20px 이런 식입니다.
-(참고) margin : 5px 6px 7px 8px; 이렇게 띄어쓰기를 이용해 작성하시면
-차례로 상 우 하 좌 마진을 5,6,7,8px 한번에 줄 수 있습니다. 
-
----
-
-- display : block이 내장되어있는 div박스
-
-```css
-.box {
-  display : block;
-}
-```
-
-모든 div, p, h1, li 등은 
-display : block 속성을 주지 않아도 
-기본적으로 내장되어있습니다. 
-그래서 p태그나 div태그를 그냥 사용하면 한 행을 전부 차지하게 됩니다. 
-이게 싫다면 display 속성을 다른 것으로 부여해주면 됩니다.
-display : inline, inline-block, flex 등 여러가지가 있습니다.
-
----
-
-- 일부 스타일은 inherit 됩니다 
-
-font-size, color, font-family, text-align 이런 속성들은 
+    <p>margin은 바깥 여백,
+  padding은 안쪽 여백,
+  border는 테두리 (차례로 두께, 선의 종류, 색상),
+  border-radius는 테두리 둥글게 처리입니다. 
+  가운데 정렬 
+      display : block;
+      margin-left : auto;
+      margin-right : auto 
+  이렇게 주면 됩니다.
+—</p>
+  </li>
+  <li>margin과 padding을 원하는 방향에만 줄 수 있습니다.
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+<span class="nl">margin-top</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="nl">padding-left</span> <span class="p">:</span> <span class="m">30px</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>top, left, bottom, right 중 원하는 곳에만 여백을 줄 수 있습니다. 
+  (참고) margin은 음수도 가능합니다. -20px 이런 식입니다.
+  (참고) margin : 5px 6px 7px 8px; 이렇게 띄어쓰기를 이용해 작성하시면
+  차례로 상 우 하 좌 마진을 5,6,7,8px 한번에 줄 수 있습니다. 
+—</p>
+  </li>
+  <li>display : block이 내장되어있는 div박스
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+<span class="nl">display</span> <span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>모든 div, p, h1, li 등은 
+      display : block 속성을 주지 않아도 
+  기본적으로 내장되어있습니다. 
+  그래서 p태그나 div태그를 그냥 사용하면 한 행을 전부 차지하게 됩니다. 
+  이게 싫다면 display 속성을 다른 것으로 부여해주면 됩니다.
+  display : inline, inline-block, flex 등 여러가지가 있습니다.
+—</p>
+  </li>
+  <li>일부 스타일은 inherit 됩니다
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>font-size, color, font-family, text-align 이런 속성들은 
 부모 태그에 쥐어주면 거기 안에 있던 태그들까지 전부 상속됩니다. 
 영어로 inherit 된다고합니다. 	안에 글자들이나 태그들이 많을 경우 
 전부 font-size를 작성안해도 부모태그에 한번에 작성하고 끝낼 수 있으니 편리합니다. 
 다 inherit되는건 아니고 글자와 관련된 스타일들이 주로 inherit 됩니다.  
-
----
-
-layout style
-====
-
-- layout
-
-사이트 레이아웃 디자인의 제 1원칙 : 모든 요소를 네모박스로 쪼개어 생각하시면 됩니다.
+</code></pre></div>    </div>
+    <hr />
+    <p>layout style
+====</p>
+  </li>
+  <li>layout
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>사이트 레이아웃 디자인의 제 1원칙 : 모든 요소를 네모박스로 쪼개어 생각하시면 됩니다.
 어려워보이는 레이아웃도 네모박스를 그려서 생각해보시면 실상 별거 아닙니다.
 그리고 네모부분을 div로 만들어서 배치만 하면 됩니다. 
-
-- 요소를 공중에 띄워 왼쪽/오른쪽 정렬하는 float 속성
-
-```html
+</code></pre></div>    </div>
+  </li>
+  <li>요소를 공중에 띄워 왼쪽/오른쪽 정렬하는 float 속성
+```html</li>
+</ul>
 <div>
   <div class="left-box"></div>
   <div class="right-box"></div>
 </div>
-```
-
-``` css
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>``` css
 .left-box {
   width : 100px; 
   height : 100px;
@@ -168,60 +136,56 @@ layout style
   height : 100px;
   float : left;
 }
-```
-
-위의 코드는 박스 두개를 만들어 각각 왼쪽으로 정렬시킵니다.
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>위의 코드는 박스 두개를 만들어 각각 왼쪽으로 정렬시킵니다.
 하지만 float를 쓰면 요소를 붕 띄우다보니 그 다음에 오는 HTML 
 요소들이 제자리를 찾지 못합니다. (참고) float 속성으로 가로정렬할 땐
 float 박스들을 싸매는 하나의 큰 div 박스를 만들고 폭을 지정해주는게 좋습니다.
-
-- float를 쓰고 나면 항상 clear 속성이 필요합니다.
-
-```html
+</code></pre></div></div>
+<ul>
+  <li>float를 쓰고 나면 항상 clear 속성이 필요합니다.
+```html</li>
+</ul>
 <div>
   <div class="left-box"></div>
   <div class="right-box"></div>
   <div class="footer"></div>
 </div>
-```
-
-``` css
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>``` css
 .footer {
   clear : both
 }
-```
-
-
-clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 찾게 됩니다.
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 찾게 됩니다.
 float썼으면 까먹지 말고 항상 넣으시면 됩니다.
 안넣으시면 내 의도와는 다른 레이아웃이 반겨줄 것입니다. 
 참고로 float : none 이것도 추가해주는게 나중에 생길 버그예방차원에서도 좋을 수 있습니다. 
+</code></pre></div></div>
 
-* Brackets / 보기 / 활성 행 하이라이트
-
-- 상대적인 크기 단위인 퍼센트 단위
-
-```css
-.box {
-  width : 80%
-}
-```
-
-이 경우 내 부모 태그의 width에 비해 80% 만큼 차지하게 됩니다.
+<ul>
+  <li>
+    <p>Brackets / 보기 / 활성 행 하이라이트</p>
+  </li>
+  <li>상대적인 크기 단위인 퍼센트 단위
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+<span class="nl">width</span> <span class="p">:</span> <span class="m">80%</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>이 경우 내 부모 태그의 width에 비해 80% 만큼 차지하게 됩니다.
 부모태그는 나를 감싸고 있는 태그를 뜻합니다. 
-
-- display : inline-block 사용 법
-
-가로로 정렬할 때 float : left 이것만 쓸 수 있는 것은 아닙니다.
+</code></pre></div>    </div>
+  </li>
+  <li>display : inline-block 사용 법
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>가로로 정렬할 때 float : left 이것만 쓸 수 있는 것은 아닙니다.
 display : inline-block을 사용해봅시다.
-
-```html
+</code></pre></div>    </div>
+    <p>```html</p>
+  </li>
+</ul>
 <div>
   <div class="left-box"></div><div class="right-box"></div>
 </div>
-```
-
-```css
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```css
 .left-box {
   width : 100px; 
   height : 100px;
@@ -232,72 +196,69 @@ display : inline-block을 사용해봅시다.
   height : 100px;
   display : inline-block;
 }
-```
-
-위의 코드는 박스를 만들어 왼쪽으로 정렬시키는 코드입니다. 
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>위의 코드는 박스를 만들어 왼쪽으로 정렬시키는 코드입니다. 
 display 속성만 inline-block으로 조정하면 가로로 배치가 가능합니다.
 inline- block은 "내 폭과 높이만큼 자리차지하게 해주세요~" 라는 뜻입니다.
-간편하지만 <태그> 사이에 스페이스바 공백이 있다면 그대로 보여주기 때문에
+간편하지만 &lt;태그&gt; 사이에 스페이스바 공백이 있다면 그대로 보여주기 때문에
 가로로 정렬하려면 태그 사이의 공백도 제거해줘야합니다.
 이런게 귀찮습니다 float 쓰셈 
-
-- 공백제거 편법1. 주석처리 기호 사용하기
-
-```html
+</code></pre></div></div>
+<ul>
+  <li>공백제거 편법1. 주석처리 기호 사용하기
+```html</li>
+</ul>
 <div>
    <div class="left-box"></div><!--
 --><div class="right-box"></div>
 </div>
-```
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 - 공백제거 편법2. 부모의 폰트사이즈를 0으로 만들기
-
 ```html
-<div style="font-size : 0px;">
-    <div class="left-box"></div>
-    <div class="right-box"></div>
-</div>
-```
+&lt;div style="font-size : 0px;"&gt;
+    &lt;div class="left-box"&gt;&lt;/div&gt;
+    &lt;div class="right-box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
 
-- 팁0) 뭘 만들든 레이아웃은 항상 박스부터 만들고 시작하면 됩니다.
-
-`<div>`는 그냥 쓰면 display : block 때문에 위아래로 배치됩니다.
+<ul>
+  <li>팁0) 뭘 만들든 레이아웃은 항상 박스부터 만들고 시작하면 됩니다.
+```</li>
+</ul>
+<div>는 그냥 쓰면 display : block 때문에 위아래로 배치됩니다.
 좌우로 나란히 배치하고 싶으면 float, 혹은 inline-block 쓰면 됩니다.
-
+```
 - 팁1) margin 속성으로 상하좌우 마진을 한꺼번에 줄 수 있습니다. 
-
 ```css
 .box {
   margin : 10px auto 30px auto;
 }
 ```
-
+```
 margin 이나 padding 속성에 4개의 값을 동시에 집어넣을 수 있는데 4개 값은 각각 상, 우, 하, 좌측을 의미합니다. 
+```
 
 - 팁2) PC 레이아웃을 만드실 때 항상 container 또는 wrap 박스를 만들어놓는게 좋습니다. 
-
 ```html
 <div class="container">
   <div class="left"></div>
   <div class="right"></div>
 </div>
 ```
-
+```
 container 박스엔 항상 width를 지정해놓는게 좋습니다.
-그래야 나중에 브라우저화면이 축소되어도 내부 div 박스들이 찌그러지지 않습니다.
-
+그래야 나중에 브라우저화면이 축소되어도 내부 div 박스들이 찌그러지지 않습니다. 
+```
 - 팁3) Brackets 에디터에선 코드를 클릭하면 미리보기 화면에서 margin, padding을 표시해줍니다.
 
-- HTML태그에 클래스 두개 이상 붙이기
 
+- HTML태그에 클래스 두개 이상 붙이기
 ```html
 <div class="container text-center"> </div>
 ```
-
-띄어쓰기를 하신 다음에 원하는 class를 집어넣으시면 됩니다. 
+```띄어쓰기를 하신 다음에 원하는 class를 집어넣으시면 됩니다. ```
 
 - 셀렉터 사용법 1. 공백
-
 ```html
 <ul class="navbar">
   <li></li>
@@ -306,29 +267,25 @@ container 박스엔 항상 width를 지정해놓는게 좋습니다.
   <li></li>
 </ul>
 ```
-
 ```css
 .navbar li {
   display : inline-block;
 }
 ```
-
 위 처럼 공백을 이용해 안에 있는 li 태그인 모든 자손을 선택할 수 있습니다.
  당연히 스페이스바 다음에 tag 셀렉터 말고 class 셀렉터 id 셀렉터 자유롭게 사용가능합니다. 
  .class .class .class 이런 식으로 무한히 연달아 사용가능합니다. 
 
-- 셀렉터 사용법 2. 꺾쇠괄호 >
-
+- 셀렉터 사용법 2. 꺾쇠괄호 &gt;
 ```css
-.navbar>li {
+.navbar&gt;li {
   display : inline-block;
 }
 ```
-
 기호를 이용해 .li-inline 바로 밑에있는 자식만 선택할 수 있습니다. 
 
-- 셀렉터 사용법 3. 더욱 상세히 선택하고 싶다면 
 
+- 셀렉터 사용법 3. 더욱 상세히 선택하고 싶다면 
 ```html
 <ul class="navbar">
   <li> <span>안녕</span> </li>
@@ -337,9 +294,8 @@ container 박스엔 항상 width를 지정해놓는게 좋습니다.
   <li></li>
 </ul>
 ```
-
 ```css
-.navbar li>span {
+.navbar li&gt;span {
   color : red;
 }
 ```
@@ -349,11 +305,9 @@ container 박스엔 항상 width를 지정해놓는게 좋습니다.
 .navbar 안에 있는 모든 li, 그리고 그 안에 있는 모든 직계 자손 span 태그를 선택하고 있습니다.
 
 - 간단한 링크 디자인 
-
 ```html
 <a href="#" class="link">링크</a>
 ```
-
 ```css
 .link {
   text-decoration : none;
@@ -370,7 +324,6 @@ pseudo-class는 나중에 설명드립니다.
 
 
 - 배경관련 CSS 속성들 
-
 ```css
 .main-background {
   background-image : url(../img/shoes.jpg);
@@ -388,35 +341,29 @@ background-attachment는 웹사이트가 스크롤될 때 배경이 신기하게
 
 
 - 배경 두개 겹치기 신공
-
 ```css
 .main-background {
   background-image : url(../img/shoes.jpg), url(person.jpg);
 }
 ```
-
 콤마로 이미지 두개를 첨부하시면 됩니다.
 투명도를 지원하는 png 이미지를 사용하면 더 재밌는 디자인을 만들 수 있겠군요
 
 - 배경에 검은색 틴트 주기
-
 ```css
 .main-background {
   background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(이미지경로~~) ;
 }
 ```
-
 linear-gradient 이건 색이 점진적으로 변하는 gradient를 줄 수 있는 키워드인데
 여기에 투명도 0.5의 검은색을 입힌 후에 배경겹치기 스킬을 사용하면 됩니다.
 
 - 주의해야할 margin 버그
-
 ```html
 <div class="배경">
   <p>안에 글씨</p>
 </div>
 ```
-
 div 박스 안에 p 태그를 사용했습니다.
 p 태그에 상단 margin을 주기 위해 margin-top을 주게 되면
 div와 p가 동시에 margin-top이 생기게 됩니다. 뭔가 이상합니다.
@@ -436,7 +383,6 @@ position과 좌표 레이아웃 만들기
 ===
 
 - 좌표속성이 있습니다.
-
 ```css
 .box {
   top : 20px;
@@ -451,7 +397,6 @@ position 속성은 좌표속성을 적용할 기준점이 여기에요~! 라고 
 
 
 - position 속성은 크게 4개 값이 있습니다.
-
 ```css
 .box {
   position : static; /* 기준이 엄서요 (좌표적용 불가) */
@@ -464,7 +409,6 @@ position 속성은 좌표속성을 적용할 기준점이 여기에요~! 라고 
 
 
 - position : absolute 를 적용한 요소 가운데 정렬 
-
 ```css
 .button {
   position : absolute; 
@@ -475,7 +419,6 @@ position 속성은 좌표속성을 적용할 기준점이 여기에요~! 라고 
   width : 적절히
 }
 ```
-
 적어도 5개의 속성이 있어야 가운데 정렬이 가능합니다. 
 5개라니 약간 귀찮아집니다. 
 
@@ -484,15 +427,16 @@ position 속성은 좌표속성을 적용할 기준점이 여기에요~! 라고 
 하지만 박스를 만들 때 주의점이 하나 있습니다. (notion 이미지)
 
 
-- 박스의 폭을 border까지 설정해주고 싶을 때 쓰는 속성 
 
+
+
+- 박스의 폭을 border까지 설정해주고 싶을 때 쓰는 속성 
 ```css
 .box {
   box-sizing : border-box; /*박스의 폭은 border까지 포함입니다*/
   box-sizing : content-box; /*박스의 폭은 padding 안쪽입니다*/
 }
 ```
-
 box-sizing이라는 속성을 주게되면 border까지를 실제 박스의 폭으로 설정해줍니다. 
 아주 고마운 속성입니다.
 빨리 모든 div 박스에 추가해보도록 합시다. 
@@ -506,7 +450,6 @@ box-sizing이라는 속성을 주게되면 border까지를 실제 박스의 폭�
 
 
 - CSS 파일 작성시 기본으로 쓰면 좋을 속성들
-
 ```css
 div {
   box-sizing : border-box;
@@ -518,7 +461,6 @@ html {
   line-height : 1.15; /*기본 행간 높이*/
 }
 ```
-
 여기에 더해서 
 모든 h, p 태그의 margin을 균일하게 설정하거나
 li, a 태그에 text-decoration : none 을 주거나
@@ -529,26 +471,24 @@ li, a 태그에 text-decoration : none 을 주거나
 
 여러분도 기본으로 복붙하고 시작할 "필수 기본값 CSS 리스트"를 하나 만들어두고 맨날 업데이트 해보십시오. 
 
-- form은 form 태그로 만들어냅니다.
 
+- form은 form 태그로 만들어냅니다.
 ```html
 <form>
-  <input>
+  <input />
 </form>
 ```
-
 input태그는 닫지 않습니다. 
 
 input의 type
-
 ```html
-<input type="text">
-<input type="email">
-<input type="password">
-<input type="radio">
-<input type="file">
-<input type="checkbox">
-<input type="submit">
+<input type="text" />
+<input type="email" />
+<input type="password" />
+<input type="radio" />
+<input type="file" />
+<input type="checkbox" />
+<input type="submit" />
 <select>
   <option>옵션1</option>
 </select>
@@ -558,93 +498,79 @@ input의 type
 나머지는 필요할 때 구글에 찾아쓰도록 합시다.  
 
 input에 넣는 속성들
-
-```html
-<input placeholder="어쩌구" value="어쩌구" name="age">
-```
-
+<input placeholder="어쩌구" value="어쩌구" name="age" />
 placeholder는 배경 글자,
 value는 미리 입력된 값,
 name은 서버 기능개발에 필요한 인풋의 이름을 설정 가능합니다.
 
 HTML의 속성으로 CSS셀렉터를 사용할 수 있습니다.
-
 ```css
 input[type=email] {
   color : grey
 }
 ```
-
 input의 type속성이 email인 요소만 찾아서 스타일을 줄 수 있습니다. 
 폼에서 특히 유용하게 사용합니다. 
 
 - 전송버튼
-
 ```html
 <button type="submit">전송</button>
-<input type="submit">
+<input type="submit" />
 ```
-
 둘 중 하나 쓰시면 됩니다.
-그리고 물론 `<form>` 태그 안에 있어야 잘 작동합니다.
+그리고 물론 <form> 태그 안에 있어야 잘 작동합니다.
 
 
-** form & input 숙제 : Contact Us 섹션 만들기 **
-
+** form &amp; input 숙제 : Contact Us 섹션 만들기 **
 ```html
 <form>
   <div class="w-100">
-    <input>
+    <input />
   </div>
   <div class="w-50">
-    <input>
+    <input />
   </div>
   <div class="w-50">
-    <input>
+    <input />
   </div>
   <div class="w-100">
     <textarea></textarea>
   </div>
 </form>
 ```
-
 가로로 꽉찬 input들은 w-100 이라는 div에 싸매고,
 가로로 반반 차지할 input들은 w-50 이라는 div에 싸맸습니다
 그리고 w-100은 width : 100%
 w-50은 width : 50%; float : left 
 이렇게 주었다고 합니다. 
 float 주면 당연히 어딘가에 clear : both 도 있어야겠군요
-
 ```
-<input> 태그 디자인은
+<input /> 태그 디자인은
 가로로 100% 폭을 주었고
 padding 조금 주고
 box-sizing : border-box
 이런걸 줬습니다.
 border-box 안해놓으면 폭이 padding을 포함해서 조금 커질 수 있기 때문입니다. 
 ```
-
 - label 태그와 for 속성
-
 ```html
-<input type="checkbox" id="subscribe">
+<input type="checkbox" id="subscribe" />
 <label for="subscribe">누르기</label>
 ```
-
 label과 for 속성을 적절히 활용하면
 input대신 label을 눌러도 input을 선택할 수 있습니다.
 (input의 id, label의 for 속성을 똑같이 맞춰주면 됩니다)
-혹은 그냥 `<input>` 에 제목이 필요할 때도 h, p 태그 이런거 말고 `<label>` 태그를 가끔 이용합니다.
+혹은 그냥 <input /> 에 제목이 필요할 때도 h, p 태그 이런거 말고 <label> 태그를 가끔 이용합니다.
 
-- vertical-align 속성을 실험해볼 이미지와 글자
+
+
+### vertical-align 속성을 실험해볼 이미지와 글자
 
 ```html
-<div>
-    <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="32" height="32"> image with a default alignment.
-</div>
+<div> <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="32" height="32" /> image with a default alignment.</div>
 ```
 
-- 기본적인 table HTML 구성 
+### 기본적인 table HTML 구성 
 
 ```html
 <table>
@@ -658,9 +584,8 @@ input대신 label을 눌러도 input을 선택할 수 있습니다.
 </table>
 ```
 
-- 테이블 셀 내에서 상하정렬할 땐 vertical-align 
-
-```css
+### 테이블 셀 내에서 상하정렬할 땐 vertical-align 
+```sss
 td, th {
   vertical-align : middle;
 }
@@ -670,47 +595,42 @@ vertical-align 속성을 이용해 테이블 내에서의 상하정렬을 하실
 top, bottom, middle 사용가능
 
 
-- inline 요소 간 상하정렬할 땐 vertical-align 
-
+### inline 요소 간 상하정렬할 땐 vertical-align 
 ```html
 <p>
   <span style="font-size : 50px">Greetings</span>   <span style="font-size : 20px">안녕</span>
 </p>
 ```
-
 display : inline 혹은 inline-block 요소들을 나란히 배치하면 상하정렬이 이상한 경우가 있습니다.
 특히 큰 이미지와 글,
 또는 큰 글씨옆에 있는 작은 글씨
 이런걸 나란히 배치했을 때 서로 높이가 맞지 않는 경우가 많은데
 이럴 때 margin-top 이런거 대신 쓰는 속성입니다.
-위의 예제에서 `<span>`안녕`</span>` 여기에 vertical-align : top 이런거 넣어서 실험해보십시오. 
+위의 예제에서 <span>안녕</span> 여기에 vertical-align : top 이런거 넣어서 실험해보십시오. 
 top, middle, bottom 말고도 super, sub, px 단위로 사용가능합니다. 
 (table 안에선 top, middle, bottom만 사용가능합니다)
 
-- display : table 
-
+### display : table 
 ```css
 .box {
   display : table;
   display : table-row;
   display : table-cell;
 }
-```
-
+``` 
 가끔 div로 이루어진 요소들을 테이블화 시키고 싶을 때가 있습니다
 그럴 땐 table태그로 변하길 원하는 요소에 display : table을 적어주신 뒤에
 tr로 변하길 원하는 요소엔 display : table-row,
 td로 변하길 원하는 요소엔 display : table-cell 을 넣어주면 됩니다. 
 하지만 그럴 일은 거의 없기 때문에 참고로만 알아둡시다. 
 
-- nth-child 셀렉터 
 
+### nth-child 셀렉터 
 ```html
 .cart-table td:nth-child(2) {
   color: red;
 } 
 ```
-
 여러 요소를 찾은 다음
 원하는 n번째 요소만 스타일을 주고 싶으면 :nth-child(n) 이걸 뒤에 붙여주면 됩니다.
 위의 코드는 그래서 .cart-table 안에 있는 모든 td를 찾은 다음
@@ -723,7 +643,6 @@ td로 변하길 원하는 요소엔 display : table-cell 을 넣어주면 됩니
   color: red;
 } 
 ```
-
 이러면 짝수로 등장하는 td에만 스타일을 줄 수도 있고
 (odd라고 쓰면 홀수입니다)
 
@@ -732,20 +651,18 @@ td로 변하길 원하는 요소엔 display : table-cell 을 넣어주면 됩니
   color: red;
 } 
 ```
-
 이러면 3의 배수로 등장하는 3,6,9,12.. 번째 등장하는 요소에만 스타일을 줄 수 있습니다.
 3n + 1 이렇게 작성하면 (3의배수 +1) 번째 등장하는 요소에만 스타일을 줄 수 있습니다.
 
 
-- 포인트1. 테두리 색상은 밑에만 넣고 싶으면
-
+### 포인트1. 테두리 색상은 밑에만 넣고 싶으면
 ```css
 td, th {
   border-bottom : 1px solid black;
 }
 ```
 
-- 포인트2. 셀 블록마다 width를 설정해줄 수 있습니다.
+### 포인트2. 셀 블록마다 width를 설정해줄 수 있습니다.
 
 ```html
 <table>
@@ -756,7 +673,6 @@ td, th {
   </tr>
 </table>
 ```
-
 ```css
 .name {
   width : 50%
@@ -765,14 +681,13 @@ td, th {
   width : 20%
 }
 ```
-
 하나의 td에 width를 주어도 전체 열의 width가 변합니다.
 나름 편리한 점이라고 볼 수 있겠습니다.
 
-- 포인트3. td 여러개를 합치고 싶으면
+### 포인트3. td 여러개를 합치고 싶으면
 colspan에 원하는 숫자를 넣으면 그 숫자만큼 옆의 셀을 합쳐줍니다. 
 
-- table 태그에 border-radius가 안먹을 때 1. 
+### table 태그에 border-radius가 안먹을 때 1. 
 
 ```css
 table {
@@ -785,7 +700,7 @@ table {
 }
 ```
 
-- table 태그에 border-radius가 안먹을 때 2. 
+### table 태그에 border-radius가 안먹을 때 2. 
 
 ```css
 table {
@@ -795,12 +710,10 @@ table {
   box-shadow : 0 0 0 1px #666;
 }
 ```
-
 box-shadow라는 속성을 이용해 테두리를 가짜로 만들어내는 편법입니다.
 box-shadow는 그림자 넣는 속성입니다.
 
-- 상태에 따라서 스타일을 줄 수 있는 Pseudo-class 셀렉터
-
+### 상태에 따라서 스타일을 줄 수 있는 Pseudo-class 셀렉터
 ```css
 .btn:hover {
   background : chocolate; /*마우스를 올려놓을 때*/
@@ -828,7 +741,6 @@ box-shadow는 그림자 넣는 속성입니다.
 
 
 ```
-
 pseudo-class 셀렉터를 붙이시면 여러 상태에 따른 스타일을 지정해줄 수 있습니다.
 hover, focus, active 스타일 넣을 때 순서는 꼭 이렇게 선언해야 잘 동작합니다.
 1. hover
@@ -839,16 +751,14 @@ hover, focus, active 스타일 넣을 때 순서는 꼭 이렇게 선언해야 �
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
-- input 등에도 자주 사용합니다
-
+### input 등에도 자주 사용합니다
 ```css
 input:focus {
   border : 2px solid red;
 }
 ```
 
-- a 태그에도 자주 사용합니다
-
+### a 태그에도 자주 사용합니다
 ```css
 a:link { 
   color : red; /*방문 전 링크*/ 
@@ -857,14 +767,12 @@ a:visited {
   color : black; /*방문 후 링크*/ 
 } 
 ```
-
 :link를 붙이면 방문 전 링크
 :visited를 붙이면 방문 후 링크에 스타일을 넣을 수 있습니다.
 모든 링크의 밑줄제거는 그냥 a태그에 text-decoration : none 붙이면 됩니다. 
 
 
-- utility class
-
+### utility class
 ```css
 .f-small {
     font-size: 12px;
@@ -872,8 +780,7 @@ a:visited {
 ```
 
 
-- 코드 양을 줄이는 CSS 작성법 (OOCSS)
-
+### 코드 양을 줄이는 CSS 작성법 (OOCSS)
 ```css
 .main-btn {
   font-size : 20px;
@@ -889,7 +796,6 @@ a:visited {
   background : blue;
 }
 ```
-
 버튼의 뼈대와 살을 분리하는 겁니다.
 1. 버튼의 기본 스타일인 padding, font-size 이런걸 정의하는 class를 하나 만들고 
 2. 버튼에 스킨 색깔놀이 하는 용도의 class를 여러개 만들어두는 겁니다.
@@ -898,7 +804,6 @@ a:visited {
 <button class="main-btn bg-red">빨간버튼</button>
 <button class="main-btn bg-blue">파란버튼</button>
 ```
-
 이렇게 뼈와 살을 각각의 class로 분리하는 방법의 장점은 
 1. 중복된 스타일을 재사용가능합니다.
 덕분에 CSS 파일용량도 줄어들고 코딩 시간도 절약됩니다.
@@ -935,7 +840,6 @@ css 파일 열지않고도 다양한 스타일을 빠르게 만들 수 있습니
   font-size : 20px;
 }
 ```
-
 글씨 font-size 변경이 잦다면 이런 식으로 utility class 들을 많이 만들어두고
 글자 스타일링할 때 가져다 쓰면 코드짜는게 매우 빨라질 수 있습니다.
 (외워두면요)
@@ -945,7 +849,7 @@ css 파일 열지않고도 다양한 스타일을 빠르게 만들 수 있습니
 어떤 아저씨가 옛날에 주장한건데 장점이 많아 실제 개발시 자주 사용합니다.
 이걸 잘 쓰는 라이브러리가 Bootstrap인데 나중에 알아봅시다. 
 
-- Block_Element--modifier
+### Block_Element--modifier
 class="덩어리이름__역할--세부특징"
 
 class wkraud 
@@ -958,7 +862,7 @@ Block_Element--modifier rule
 
 ```css
 <div class="profile">
-  <img class="profile">
+  <img class="profile" />
   <h4 class="profile">이름</h4>
   <p class="profile">소개글</p>
   <button class="profile">빨간버튼</button>
@@ -977,7 +881,7 @@ Block_Element--modifier rule
 
 ```css
 <div class="profile">
-  <img class="profile__img">
+  <img class="profile__img" />
   <h4 class="profile__h4">이름</h4>
   <p class="profile__content">소개글</p>
   <button class="profile__button">빨간버튼</button>
@@ -994,7 +898,7 @@ Block_Element--modifier rule
 
 ```css
 <div class="profile">
-  <img class="profile__img">
+  <img class="profile__img" />
   <h4 class="profile__h4">이름</h4>
   <p class="profile__content">소개글</p>
   <button class="profile__button--red">빨간버튼</button>
@@ -1019,3 +923,5 @@ class 중복되어도 컴포넌트끼리 스타일이 간섭되지 않게 코드
 
 
 
+</label></form></div>
+:ET
