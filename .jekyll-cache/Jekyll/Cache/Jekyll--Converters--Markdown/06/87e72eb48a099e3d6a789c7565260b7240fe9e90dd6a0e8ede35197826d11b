@@ -1,0 +1,24 @@
+I"�<h1 id="주석">주석</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 한줄 주석
+</span><span class="s">"""여러줄 주석"""</span>
+</code></pre></div></div>
+
+<h1 id="숫자형">숫자형</h1>
+<ul>
+  <li>정수형 int</li>
+  <li>실수 float</li>
+  <li>지수 float</li>
+  <li>8진수</li>
+  <li>16진수</li>
+  <li>사칙연산 가능
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span>  <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span>  <span class="mi">4</span>
+<span class="c1"># + - *
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 제곱
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 나누기
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 몫이 나온다
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 나머지가 나온다
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+:ET

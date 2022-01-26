@@ -1,0 +1,99 @@
+I"c <h1 id="주석">주석</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 한줄 주석
+</span><span class="s">"""여러줄 주석"""</span>
+</code></pre></div></div>
+
+<h1 id="숫자형">숫자형</h1>
+<ul>
+  <li>정수형 int</li>
+  <li>실수 float</li>
+  <li>지수 float</li>
+  <li>8진수</li>
+  <li>16진수</li>
+  <li>사칙연산 가능
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span>  <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span>  <span class="mi">4</span>
+<span class="c1"># + - *
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 제곱
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 나누기
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 몫이 나온다
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 나머지가 나온다
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="문자열">문자열</h1>
+
+<h3 id="문자열---4가지">문자열 - 4가지</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">1.</span> <span class="s">"Hello World"</span>
+<span class="mf">2.</span> <span class="s">'python is fun'</span>
+<span class="mf">3.</span> <span class="s">"""Life is too short,
+You need python 줄바꿈 가능"""</span>
+<span class="mf">4.</span> <span class="s">'''Life is too short,
+You need
+python 줄바꿈 가능'''</span>
+
+<span class="s">'백슬러시 가능 </span><span class="se">\\</span><span class="s">'</span>  \\<span class="s">" '
+
+a = "</span><span class="n">python</span><span class="s">"
+b = "</span> <span class="ow">is</span> <span class="n">fun</span><span class="s">"
+print(a + b) # 더하기
+print(a *  10) #곱하기 python 10번 출력
+</span></code></pre></div></div>
+<hr />
+<h3 id="문자열---인덱싱">문자열 - 인덱싱</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"Life is too short, You need Python"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># i
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 마지막 문자 n
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># o
+</span></code></pre></div></div>
+<hr />
+<h3 id="문자열---슬라이싱-이상미만간격">문자열 - 슬라이싱 [이상:미만:간격]</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"20010331Rainy"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># 비우면 처음부터 시작
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">8</span><span class="p">:])</span> <span class="c1"># 8부터 끝까지
+</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">"12345678"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># 1357
+</span></code></pre></div></div>
+<hr />
+<h3 id="문자열---포맷팅">문자열 - 포맷팅</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># %s string %c char %d integer 
+# %f float %o 8진수 %x 16진수 %% Literal % {문자 '%' 자체}
+</span>
+<span class="n">number</span> <span class="o">=</span>  <span class="mi">10</span>
+<span class="n">day</span> <span class="o">=</span> <span class="s">"three"</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s">"I ate %d apples. so i was sick for %s days."</span>  <span class="o">%</span> <span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="c1"># I ate 10 apples. so i was sick for three days.
+</span></code></pre></div></div>
+<hr />
+<h3 id="36-version-이상부터-가능">3.6 version 이상부터 가능</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span>  <span class="s">"mazino"</span>
+<span class="n">b</span> <span class="o">=</span>  <span class="sa">f</span><span class="s">"나의 이름은 </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s"> 입니다"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+<hr />
+<h3 id="-간격--소수점-남기는-자리수-f">% 간격 . 소수점 남기는 자리수 f</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"%0.4f"</span>  <span class="o">%</span>  <span class="mf">3.23423423</span>  <span class="c1"># 3.2342
+</span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+<hr />
+<h4 id="count--변수안에-포함된-문자열-갯수">.count : 변수안에 포함된 문자열 갯수</h4>
+<h4 id="find--처음에-나오는-문자열-인덱스">.find : 처음에 나오는 문자열 인덱스</h4>
+<h4 id="없으면--1-return">없으면 -1 return</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span>  <span class="s">"hobby"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">"b"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"b"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"x"</span><span class="p">))</span> <span class="c1"># -1
+</span></code></pre></div></div>
+<h3 id="join--기준으로-쪼개준다">.join : 기준으로 쪼개준다</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">","</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">"abcd"</span><span class="p">)</span> <span class="c1"># a,b,c,d,
+</span></code></pre></div></div>
+<h4 id="upper-lower-strip--양쪽-공백-지우기">.upper(), .lower(), .strip() &lt; 양쪽 공백 지우기</h4>
+<h4 id="replace-split-띄어쓰기-기준으로-list-return">.replace, .split() 띄어쓰기 기준으로 list return</h4>
+:ET
