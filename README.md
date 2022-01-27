@@ -4,6 +4,17 @@ title: About
 permalink: /about/
 ---
 
+Mazino blog
+===
+
+**간단하고 찾기 쉽게 작성을 한다**
+<br />
+
+**꾸준히 작성한다**
+<br />
+
+**모르는건 작성하지 않는다**
+
 ## Theme Monos
 > Simple and lightweight theme for Jekyll
 
@@ -22,6 +33,9 @@ highlighter-theme: monokai //you can change your syntax color scheme.
 date_format: "%Y-%M-%D" //and date format.
 ```
 
+
+
+<!-- 
 ### Screenshots
 #### Page
 ![alt text](/public/img/screenshot-1.png)
@@ -30,4 +44,4 @@ date_format: "%Y-%M-%D" //and date format.
 #### Page - Mobile
 ![alt text](/public/img/screenshot-m1.png)
 #### Page - Articles
-![alt text](/public/img/screenshot-m2.png)
+![alt text](/public/img/screenshot-m2.png) -->

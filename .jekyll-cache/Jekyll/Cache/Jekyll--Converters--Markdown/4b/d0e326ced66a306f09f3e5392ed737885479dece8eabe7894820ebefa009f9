@@ -1,0 +1,446 @@
+I"0i<p><strong>- 자주 사용</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">font-size</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">font-family</span> <span class="p">:</span> <span class="s2">'gulim'</span><span class="p">;</span>
+  <span class="nl">color</span> <span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span> <span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+  <span class="nl">text-align</span> <span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">font-weight</span> <span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><strong>- 이미지 정렬과 폭 조정</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">margin-left</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-right</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><strong>- 텍스트의 일부만 스타일을 변경하고 싶을 때</strong></p>
+
+<p><code class="highlighter-rouge">&lt;span&gt;</code> 이라는 태그로 감싼 뒤에 스타일을 주면 됩니다.<br />
+<code class="highlighter-rouge">&lt;span&gt;</code> 태그는 가끔 글자 일부를 싸매고 싶을 때 사용하는 큰 의미없는 태그입니다.<br />
+<code class="highlighter-rouge">&lt;strong&gt;</code> 태그로 글자 일부를 싸매면 간단히 굵게 표현도 가능합니다.<br />
+<br />
+(참고) span 태그는 display : inline 이라는 스타일 속성을 내포하고 있으며,<br />
+display : inline을 가지고 있는 요소는 폭, 높이 등을 단독으로 결정할 수 없습니다.<br />
+폭, 높이를 주고싶으면 얘를 감싸고 있는 <code class="highlighter-rouge">&lt;p&gt;</code>에 주십시오<br />
+<br /></p>
+
+<p><strong>- HTML에 첨부</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span>  <span class="na">href=</span><span class="s">"css파일경로"</span>  <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">&lt;head&gt;</code>태그 안에 <code class="highlighter-rouge">&lt;link&gt;</code>태그를 넣으시고
+href라는 속성에 여러분의 .css 파일 경로를 지정해놓으면 css 파일 이용가능합니다.</p>
+
+<p><strong>- CSS selector</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span> <span class="nl">font-size</span> <span class="p">:</span> <span class="m">16px</span> <span class="p">}</span> <span class="c">/*태그*/</span>
+<span class="nc">.profile</span> <span class="p">{</span> <span class="nl">font-size</span> <span class="p">:</span> <span class="m">20px</span> <span class="p">}</span> <span class="c">/*클래스*/</span>
+<span class="nf">#special</span> <span class="p">{</span> <span class="nl">font-size</span> <span class="p">:</span> <span class="m">30px</span> <span class="p">}</span> <span class="c">/*아이디*/</span>
+</code></pre></div></div>
+
+<p><strong>- 셀렉터의 우선순위</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">style</span><span class="o">=</span><span class="s1">""</span> <span class="o">(</span><span class="err">1000</span><span class="nt">점</span><span class="o">)</span>
+<span class="nf">#id</span> <span class="o">(</span><span class="err">100</span><span class="nt">점</span><span class="o">)</span>
+<span class="nc">.class</span> <span class="o">(</span><span class="err">10</span><span class="nt">점</span><span class="o">)</span>
+<span class="nt">p</span> <span class="o">(</span><span class="err">1</span><span class="nt">점</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h1 id="css-layout">CSS Layout</h1>
+
+<ul>
+  <li>네모 박스 디자인에 많이 사용하는 CSS 속성</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">margin</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span> 
+  <span class="nl">padding</span> <span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">border</span> <span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">border-radius</span> <span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>margin은 바깥 여백,
+padding은 안쪽 여백,
+border는 테두리 (차례로 두께, 선의 종류, 색상),
+border-radius는 테두리 둥글게 처리입니다. 
+가운데 정렬 
+	display : block;
+	margin-left : auto;
+	margin-right : auto 
+	이렇게 주면 됩니다.</p>
+
+<hr />
+
+<ul>
+  <li>margin과 padding을 원하는 방향에만 줄 수 있습니다.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">margin-top</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">padding-left</span> <span class="p">:</span> <span class="m">30px</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>top, left, bottom, right 중 원하는 곳에만 여백을 줄 수 있습니다. 
+(참고) margin은 음수도 가능합니다. -20px 이런 식입니다.
+(참고) margin : 5px 6px 7px 8px; 이렇게 띄어쓰기를 이용해 작성하시면
+차례로 상 우 하 좌 마진을 5,6,7,8px 한번에 줄 수 있습니다.</p>
+
+<hr />
+
+<ul>
+  <li>display : block이 내장되어있는 div박스</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>모든 div, p, h1, li 등은 
+display : block 속성을 주지 않아도 
+기본적으로 내장되어있습니다. 
+그래서 p태그나 div태그를 그냥 사용하면 한 행을 전부 차지하게 됩니다. 
+이게 싫다면 display 속성을 다른 것으로 부여해주면 됩니다.
+display : inline, inline-block, flex 등 여러가지가 있습니다.</p>
+
+<hr />
+
+<ul>
+  <li>일부 스타일은 inherit 됩니다</li>
+</ul>
+
+<p>font-size, color, font-family, text-align 이런 속성들은 
+부모 태그에 쥐어주면 거기 안에 있던 태그들까지 전부 상속됩니다. 
+영어로 inherit 된다고합니다. 	안에 글자들이나 태그들이 많을 경우 
+전부 font-size를 작성안해도 부모태그에 한번에 작성하고 끝낼 수 있으니 편리합니다. 
+다 inherit되는건 아니고 글자와 관련된 스타일들이 주로 inherit 됩니다.</p>
+
+<hr />
+
+<h1 id="layout-style">layout style</h1>
+
+<ul>
+  <li>layout</li>
+</ul>
+
+<p>사이트 레이아웃 디자인의 제 1원칙 : 모든 요소를 네모박스로 쪼개어 생각하시면 됩니다.
+어려워보이는 레이아웃도 네모박스를 그려서 생각해보시면 실상 별거 아닙니다.
+그리고 네모부분을 div로 만들어서 배치만 하면 됩니다.</p>
+
+<ul>
+  <li>요소를 공중에 띄워 왼쪽/오른쪽 정렬하는 float 속성</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.left-box</span> <span class="p">{</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span> 
+  <span class="nl">height</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">float</span> <span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.right-box</span> <span class="p">{</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span> 
+  <span class="nl">height</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">float</span> <span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>위의 코드는 박스 두개를 만들어 각각 왼쪽으로 정렬시킵니다.
+하지만 float를 쓰면 요소를 붕 띄우다보니 그 다음에 오는 HTML 
+요소들이 제자리를 찾지 못합니다. (참고) float 속성으로 가로정렬할 땐
+float 박스들을 싸매는 하나의 큰 div 박스를 만들고 폭을 지정해주는게 좋습니다.</p>
+
+<ul>
+  <li>float를 쓰고 나면 항상 clear 속성이 필요합니다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.footer</span> <span class="p">{</span>
+  <span class="nl">clear</span> <span class="p">:</span> <span class="nb">both</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 찾게 됩니다.
+float썼으면 까먹지 말고 항상 넣으시면 됩니다.
+안넣으시면 내 의도와는 다른 레이아웃이 반겨줄 것입니다. 
+참고로 float : none 이것도 추가해주는게 나중에 생길 버그예방차원에서도 좋을 수 있습니다.</p>
+
+<ul>
+  <li>
+    <p>Brackets / 보기 / 활성 행 하이라이트</p>
+  </li>
+  <li>
+    <p>상대적인 크기 단위인 퍼센트 단위</p>
+  </li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">80%</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이 경우 내 부모 태그의 width에 비해 80% 만큼 차지하게 됩니다.
+부모태그는 나를 감싸고 있는 태그를 뜻합니다.</p>
+
+<ul>
+  <li>display : inline-block 사용 법</li>
+</ul>
+
+<p>가로로 정렬할 때 float : left 이것만 쓸 수 있는 것은 아닙니다.
+display : inline-block을 사용해봅시다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left-box"</span><span class="nt">&gt;&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"right-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.left-box</span> <span class="p">{</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span> 
+  <span class="nl">height</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.right-box</span> <span class="p">{</span>
+  <span class="nl">width</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span> 
+  <span class="nl">height</span> <span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>위의 코드는 박스를 만들어 왼쪽으로 정렬시키는 코드입니다. 
+display 속성만 inline-block으로 조정하면 가로로 배치가 가능합니다.
+inline- block은 “내 폭과 높이만큼 자리차지하게 해주세요~” 라는 뜻입니다.
+간편하지만 <태그> 사이에 스페이스바 공백이 있다면 그대로 보여주기 때문에
+가로로 정렬하려면 태그 사이의 공백도 제거해줘야합니다.
+이런게 귀찮습니다 float 쓰셈</태그></p>
+
+<ul>
+  <li>공백제거 편법1. 주석처리 기호 사용하기</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left-box"</span><span class="nt">&gt;&lt;/div&gt;</span><span class="c">&lt;!--
+--&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>공백제거 편법2. 부모의 폰트사이즈를 0으로 만들기</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"font-size : 0px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>팁0) 뭘 만들든 레이아웃은 항상 박스부터 만들고 시작하면 됩니다.</li>
+</ul>
+
+<p><code class="highlighter-rouge">&lt;div&gt;</code>는 그냥 쓰면 display : block 때문에 위아래로 배치됩니다.
+좌우로 나란히 배치하고 싶으면 float, 혹은 inline-block 쓰면 됩니다.</p>
+
+<ul>
+  <li>팁1) margin 속성으로 상하좌우 마진을 한꺼번에 줄 수 있습니다.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">margin</span> <span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span> <span class="m">30px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>margin 이나 padding 속성에 4개의 값을 동시에 집어넣을 수 있는데 4개 값은 각각 상, 우, 하, 좌측을 의미합니다.</p>
+
+<ul>
+  <li>팁2) PC 레이아웃을 만드실 때 항상 container 또는 wrap 박스를 만들어놓는게 좋습니다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>container 박스엔 항상 width를 지정해놓는게 좋습니다.
+그래야 나중에 브라우저화면이 축소되어도 내부 div 박스들이 찌그러지지 않습니다.</p>
+
+<ul>
+  <li>
+    <p>팁3) Brackets 에디터에선 코드를 클릭하면 미리보기 화면에서 margin, padding을 표시해줍니다.</p>
+  </li>
+  <li>
+    <p>HTML태그에 클래스 두개 이상 붙이기</p>
+  </li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container text-center"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>띄어쓰기를 하신 다음에 원하는 class를 집어넣으시면 됩니다.</p>
+
+<ul>
+  <li>셀렉터 사용법 1. 공백</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.navbar</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>위 처럼 공백을 이용해 안에 있는 li 태그인 모든 자손을 선택할 수 있습니다.
+ 당연히 스페이스바 다음에 tag 셀렉터 말고 class 셀렉터 id 셀렉터 자유롭게 사용가능합니다. 
+ .class .class .class 이런 식으로 무한히 연달아 사용가능합니다.</p>
+
+<ul>
+  <li>셀렉터 사용법 2. 꺾쇠괄호 &gt;</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.navbar</span><span class="o">&gt;</span><span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">display</span> <span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>기호를 이용해 .li-inline 바로 밑에있는 자식만 선택할 수 있습니다.</p>
+
+<ul>
+  <li>셀렉터 사용법 3. 더욱 상세히 선택하고 싶다면</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span> <span class="nt">&lt;span&gt;</span>안녕<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.navbar</span> <span class="nt">li</span><span class="o">&gt;</span><span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">color</span> <span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>셀렉터를 그냥 연달아 사용하시면 됩니다. 
+위의 예제는
+.navbar 안에 있는 모든 li, 그리고 그 안에 있는 모든 직계 자손 span 태그를 선택하고 있습니다.</p>
+
+<ul>
+  <li>간단한 링크 디자인</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link"</span><span class="nt">&gt;</span>링크<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.link</span> <span class="p">{</span>
+  <span class="nl">text-decoration</span> <span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.link</span><span class="nd">:visited</span> <span class="p">{</span>
+  <span class="nl">color</span> <span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>링크는 기본적으로 밑줄이 쳐져있는데, 이걸 제거하고싶다면 text-decoration 속성을 만져주시면 됩니다. 
+그리고 링크를 방문했을 시 보라색으로 변하는데, 이걸 조작하고 싶다면 :visited 라는 pseudo-class를 셀렉터에 붙이면 되는데
+그럼 방문 후(visited) 링크들의 스타일을 지정해줄 수 있는데
+pseudo-class는 나중에 설명드립니다.</p>
+
+<ul>
+  <li>배경관련 CSS 속성들</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-background</span> <span class="p">{</span>
+  <span class="nl">background-image</span> <span class="p">:</span> <span class="sx">url(../img/shoes.jpg)</span><span class="p">;</span>
+  <span class="nl">background-size</span> <span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+  <span class="nl">background-repeat</span> <span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-position</span> <span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-attachment</span> <span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>background-size는 px, % 단위도 가능하고
+cover는 배경으로 꽉채워주세요
+contain은 배경이 짤리지 않게 꽉채워주세요 라는 뜻입니다.
+background-attachment는 웹사이트가 스크롤될 때 배경이 신기하게 동작하게 만들고 싶으면 써보도록 합시다.</p>
+
+<ul>
+  <li>배경 두개 겹치기 신공</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-background</span> <span class="p">{</span>
+  <span class="nl">background-image</span> <span class="p">:</span> <span class="sx">url(../img/shoes.jpg)</span><span class="p">,</span> <span class="sx">url(person.jpg)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>콤마로 이미지 두개를 첨부하시면 됩니다.
+투명도를 지원하는 png 이미지를 사용하면 더 재밌는 디자인을 만들 수 있겠군요</p>
+
+<ul>
+  <li>배경에 검은색 틴트 주기</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-background</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.5</span><span class="p">),</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.5</span><span class="p">)</span> <span class="p">),</span> <span class="sx">url(이미지경로~~)</span> <span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>linear-gradient 이건 색이 점진적으로 변하는 gradient를 줄 수 있는 키워드인데
+여기에 투명도 0.5의 검은색을 입힌 후에 배경겹치기 스킬을 사용하면 됩니다.</p>
+
+<ul>
+  <li>주의해야할 margin 버그</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"배경"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>안에 글씨<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>div 박스 안에 p 태그를 사용했습니다.
+p 태그에 상단 margin을 주기 위해 margin-top을 주게 되면
+div와 p가 동시에 margin-top이 생기게 됩니다. 뭔가 이상합니다.</p>
+
+<p>이 현상은 margin collapse effect 라고 부르는 일종의 버그입니다.
+원래 박스들의 테두리가 만나면 margin이 합쳐집니다. (박스가 내부에서 만나든 외부에서 만나든 상관없습니다.)</p>
+
+<p>정확히 말하면</p>
+<ol>
+  <li>마진을 하나로 합쳐주고</li>
+  <li>혹여나 둘 다 마진이 있으면 둘 중에 더 큰 마진을 하나만 적용하게 됩니다.</li>
+</ol>
+
+<p>그래서 두 박스의 테두리가 겹치지 않도록 해주시면 보다 더 정확한 마진 노가다를 하실 수 있습니다. 
+강의 예제에선 부모 박스에 padding을 1px 이렇게 조금 주는 것으로 쉽게 해결 가능합니다.
+불만이 있다면 웹표준을 관리하는 www.w3.org 이라는 단체에 따지도록 합시다.</p>
+:ET
