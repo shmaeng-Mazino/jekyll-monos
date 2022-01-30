@@ -1,0 +1,140 @@
+I"�(<h1 id="css-selector">CSS Selector</h1>
+
+<blockquote>
+  <p>Selector</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">Selector</span> <span class="p">{</span><span class="py">Property</span><span class="p">:</span><span class="n">Property</span> <span class="n">value</span><span class="p">;}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>종류</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* 단수 */</span>
+<span class="nt">h1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">p</span>  <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 복수 : 쉼표( , )로 구분 */</span>
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 전체 셀렉터 (Universal Selector)
+&gt; 모든 요소를 선택 */</span>
+<span class="o">*</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 태그 셀렉터 (Type Selector)
+&gt; 모든 p 태그 요소를 선택 */</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* ID 셀렉터 (ID Selector)
+&gt; id 어트리뷰트 값이 p1인 요소를 선택 */</span>
+<span class="nf">#p1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 클래스 셀렉터 (Class Selector)
+&gt; class 어트리뷰트 값이 container인 모든 요소를 선택
+&gt; color 어트리뷰트는 자식 요소에 상속된다. */</span>
+<span class="nc">.container</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="c">/* not supported in IE 
+initial : 초기화 */</span>
+<span class="nf">#p2</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="n">initial</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 어트리뷰트 셀렉터 (Attribute Selector)
+/* 셀렉터[어트리뷰트] 
+&gt; a 요소 중에 href 어트리뷰트를 갖는 모든 요소*/</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트=”값”]
+&gt; a 요소 중에 target 어트리뷰트의 값이 "_blank"인 모든 요소 */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">target</span><span class="o">=</span><span class="s1">"_blank"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트~=”값”]
+&gt; h1 요소 중에 title 어트리뷰트 값에 "first"를 단어로 포함하는 요소 */</span>
+<span class="nt">h1</span><span class="o">[</span><span class="nt">title</span><span class="o">~=</span><span class="s1">"first"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트|=”값”] 
+&gt; p 요소 중에 lang 어트리뷰트 값이 "en"과 일치하거나 "en-"로 시작하는 요소 */</span>
+<span class="nt">p</span><span class="o">[</span><span class="nt">lang</span><span class="o">|=</span><span class="s1">"en"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트^=”값”] 
+&gt; a 요소 중에 href 어트리뷰트 값이 "https://"로 시작하는 요소 */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="s1">"https://"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트$=”값”]
+&gt; a 요소 중에 href 어트리뷰트 값이 ".html"로 끝나는 요소 */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="s1">".html"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 셀렉터[어트리뷰트*=”값”] */</span>
+<span class="c">/* div 요소 중에서 class 어트리뷰트 값에 "test"를 포함하는 요소 */</span>
+<span class="nt">div</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s1">"test"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="c">/* div 요소 중에서 class 어트리뷰트 값에 "test"를 단어로 포함하는 요소 */</span>
+<span class="nt">div</span><span class="o">[</span><span class="nt">class</span><span class="o">~=</span><span class="s1">"test"</span><span class="o">]</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 복합 셀렉터 (Combinator) */</span>
+<span class="c">/* 후손 셀렉터 (Descendant Combinator) 
+&gt; div 요소의 후손요소 중 p 요소 */</span>
+<span class="nt">div</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 자식 셀렉터 (Child Combinator)
+&gt; div 요소의 자식요소 중 p 요소 */</span>
+<span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"font-size : 20px; color : red"</span><span class="nt">&gt;</span> 글자 <span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li>거의 모든 태그는 style=”” 가능합니다.</li>
+  <li>스타일이름 : 스타일값;</li>
+  <li>세미콜론 <strong>필수</strong> 입니다!!</li>
+</ul>
+
+<hr />
+<h3 id="자주-사용하는-속성">자주 사용하는 속성</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+	<span class="nl">font-size</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+	<span class="nl">font-family</span> <span class="p">:</span> <span class="s2">'gulim'</span><span class="p">;</span>
+	<span class="nl">color</span> <span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">letter-spacing</span> <span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+	<span class="nl">text-align</span> <span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+	<span class="nl">font-weight</span> <span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+<h3 id="이미지-정렬-폭-조정">이미지 정렬 폭 조정</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.image</span> <span class="p">{</span>
+    <span class="nl">display</span> <span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="nl">margin-left</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">margin-right</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">width</span> <span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>이미지 가운데 정렬할 때 사용합니다.</li>
+</ul>
+
+<hr />
+<h3 id="텍스트의-일부만-스타일을-변경하고-싶을-때">텍스트의 일부만 스타일을 변경하고 싶을 때</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>안녕하세요 저는 <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"color : red;"</span><span class="nt">&gt;</span>뛰어난<span class="nt">&lt;/span&gt;</span> 개발자입니다.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li>span 태그 이용해서 변경하면 됩니다.</li>
+  <li>span 태그 display : inline 이라는 스타일 속성이 존재 합니다.</li>
+  <li>display : inline을 가지고 있는 요소는 폭, 높이 등을 단독으로 결정할 수 없습니다.</li>
+  <li>폭, 높이를 주고싶으면 얘를 감싸고 있는 p태그에 주시면 됩니다.</li>
+</ul>
+:ET
