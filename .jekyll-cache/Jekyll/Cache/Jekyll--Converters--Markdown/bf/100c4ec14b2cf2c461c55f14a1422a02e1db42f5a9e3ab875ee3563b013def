@@ -1,0 +1,69 @@
+I"Å<h1 id="javascript---map">Javascript - MAP</h1>
+
+<ul>
+  <li><strong>JavaScript (Behavior)</strong>
+    <ul>
+      <li><span style="background-color: #dcffe4">ES6+ Syntax</span>
+        <ul>
+          <li>Basic
+            <ul>
+              <li>let, const</li>
+              <li>if, for, switch, while</li>
+              <li>function</li>
+              <li>object</li>
+            </ul>
+          </li>
+          <li>Advanced
+            <ul>
+              <li>Prototype</li>
+              <li>Hoisting</li>
+              <li>Scope</li>
+              <li>Closure</li>
+            </ul>
+          </li>
+          <li>Browser APIs
+            <ul>
+              <li>DOM Manipulation</li>
+              <li>Events</li>
+              <li>Fetch API (Async)</li>
+            </ul>
+          </li>
+          <li><span style="background-color: #dcffe4">TypeScript</span>
+            <ul>
+              <li>Types</li>
+              <li>OOP</li>
+            </ul>
+          </li>
+          <li>JavaScript Framework
+            <ul>
+              <li><span style="background-color: #dcffe4">React</span></li>
+              <li>Vue</li>
+              <li>Angular</li>
+              <li>Svelte</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Single Page Application (SPA)</p>
+      </li>
+      <li>Static Site Generators (SSG)
+        <ul>
+          <li>Gatsby (React)</li>
+          <li>GridSome (Vue)</li>
+          <li>11ty (JS)</li>
+        </ul>
+      </li>
+      <li>Server Side Rendering (SSR)
+        <ul>
+          <li>Next.js (React)</li>
+          <li>Nuxt.js (Vue)</li>
+          <li>Universal (Angular)</li>
+          <li>Sapper (Svelte)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+:ET

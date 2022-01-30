@@ -1,0 +1,52 @@
+I"9<p>목차<br />
+<a href="#간단한-style-등록">간단한 style 등록</a><br />
+<a href="#자주-사용하는-속성">자주 사용하는 속성</a><br />
+<a href="#이미지-정렬-폭-조정">이미지 정렬 폭 조정</a><br />
+<a href="#텍스트의-일부만-스타일을-변경하고-싶을-때">텍스트의 일부만 스타일을 변경하고 싶을 때</a><br /></p>
+
+<hr />
+<h3 id="간단한-style-등록">간단한 style 등록</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"font-size : 20px; color : red"</span><span class="nt">&gt;</span> 글자 <span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li>거의 모든 태그는 style=”” 가능합니다.</li>
+  <li>스타일이름 : 스타일값;</li>
+  <li>세미콜론 <strong>필수</strong> 입니다!!</li>
+</ul>
+
+<hr />
+<h3 id="자주-사용하는-속성">자주 사용하는 속성</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+	<span class="nl">font-size</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+	<span class="nl">font-family</span> <span class="p">:</span> <span class="s2">'gulim'</span><span class="p">;</span>
+	<span class="nl">color</span> <span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">letter-spacing</span> <span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+	<span class="nl">text-align</span> <span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+	<span class="nl">font-weight</span> <span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+<h3 id="이미지-정렬-폭-조정">이미지 정렬 폭 조정</h3>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.image</span> <span class="p">{</span>
+    <span class="nl">display</span> <span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="nl">margin-left</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">margin-right</span> <span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">width</span> <span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>이미지 가운데 정렬할 때 사용합니다.</li>
+</ul>
+
+<hr />
+<h3 id="텍스트의-일부만-스타일을-변경하고-싶을-때">텍스트의 일부만 스타일을 변경하고 싶을 때</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>안녕하세요 저는 <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"color : red;"</span><span class="nt">&gt;</span>뛰어난<span class="nt">&lt;/span&gt;</span> 개발자입니다.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li>span 태그 이용해서 변경하면 됩니다.</li>
+  <li>span 태그 display : inline 이라는 스타일 속성이 존재 합니다.</li>
+  <li>display : inline을 가지고 있는 요소는 폭, 높이 등을 단독으로 결정할 수 없습니다.</li>
+  <li>폭, 높이를 주고싶으면 얘를 감싸고 있는 p태그에 주시면 됩니다.</li>
+</ul>
+:ET
