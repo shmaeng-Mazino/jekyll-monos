@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS - Styling 3 (Box Model)
-date: 2022-01-30 20:00:00 +0900
+date: 2022-02-01 20:00:00 +0900
 category: CSS
 ---
 
@@ -143,7 +143,7 @@ p.d4 {
 	/* 위 코드는 아래의 shorthand이다.
 	border-top-left-radius:     20px;
 	border-top-right-radius:    20px;
-	border-bottom-right-radius: 20px;
+	border-bottom-right-radius: 20px;git
 	border-bottom-left-radius:  20px;
 	*/
 }
