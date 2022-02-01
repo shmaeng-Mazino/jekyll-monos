@@ -2,7 +2,7 @@
 layout: post
 title: Javascript - MAP
 date: 2022-01-30 15:00:00 +0900
-category: Javascript
+category: Javascript MAP
 ---
 
 Javascript - MAP
