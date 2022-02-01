@@ -2,7 +2,7 @@
 layout: post
 title: HTML - MAP
 date: 2022-01-21 22:00:00 +0900
-category: HTML MAP
+category: HTML
 ---
 
 HTML - MAP
