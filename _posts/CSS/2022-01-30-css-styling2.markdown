@@ -86,7 +86,7 @@ div > p { color: red; }
 
 /* 인접 형제 셀렉터(Adjacent Sibling Combinator)
 > p 요소의 형제 요소 중에 p 요소 바로 뒤에 위치하는 ul 요소를 선택한다. */
-p + ul { color: red; } */
+p + ul { color: red; }
 
 /* 일반 형제 셀렉터(General Sibling Combinator) 
 > p 요소의 형제 요소 중에 p 요소 뒤에 위치하는 ul 요소를 모두 선택한다.*/

@@ -97,6 +97,16 @@ position : absolute는 부모 박스를 기준으로 찰싹 달라붙은 뒤에 
 }
 ```
 
+> 박스의 폭을 border까지 설정해주고 싶을 때 쓰는 속성 
+
+```css
+.box {
+  box-sizing : border-box; /*박스의 폭은 border까지 포함입니다*/
+  box-sizing : content-box; /*박스의 폭은 padding 안쪽입니다*/
+}
+```
+
+box-sizing이라는 속성을 주게되면 border까지를 실제 박스의 폭으로 설정해줍니다.<br />
 
 <br />
 참고 (References)
