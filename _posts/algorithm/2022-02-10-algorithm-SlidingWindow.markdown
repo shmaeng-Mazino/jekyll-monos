@@ -1,6 +1,6 @@
 ---
 layout: post
-title: algorithm - 다중 포인터 (MultiplePointers)
+title: algorithm - 슬라이딩 윈도우 (Sliding Window)
 date: 2022-02-10 07:00:00 +0900
 category: algorithm
 ---
