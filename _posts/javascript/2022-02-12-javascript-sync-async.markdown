@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript - 동기, 비동기, 블로킹, 논블로킹 (작성중)
+title: Javascript - 동기, 비동기, 블로킹, 논블로킹
 date: 2022-02-10 14:00:00 +0900
 category: Javascript
 ---
