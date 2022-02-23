@@ -25,6 +25,43 @@ category: Javascript
 작업 완료 여부를 확인하지 않는다.<br />
 <br />
 
+```javascript
+// 비동기 호출
+function taskA (a, b, cb) {
+    setTimeout(() => {
+        const res = a + b;
+        cb(res);
+    }, 3000);
+}
+
+function taskB (a, cb) {
+    setTimeout(() => {
+        const res = a * 2;
+        cb(res);
+    }, 1000);
+}
+
+function taskC (a, cb) {
+    setTimeout(() => {
+        const res = a * -1;
+        cb(res);
+    }, 2000);
+}
+
+taskA(3, 4, (res) => {
+    console.log('A TASK result : ', res);
+});
+
+taskB(3, (res) => {
+    console.log('B TASK result : ', res);
+});
+
+taskC(5, (res) => {
+    console.log('C TASK result : ', res);
+});
+
+```
+
 > 블로킹(Blocking), 논블로킹(Non-Blocking)
 
 블로킹/논블로킹은 주로 멀티 스레딩, I/O 등에서 사용되는 개념이며, <br />
