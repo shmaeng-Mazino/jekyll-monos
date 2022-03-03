@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript - Promise (작성중)
+title: Javascript - Promise
 date: 2022-02-24 15:00:00 +0900
 category: Javascript
 ---
