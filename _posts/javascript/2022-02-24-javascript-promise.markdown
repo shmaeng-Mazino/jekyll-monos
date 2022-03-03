@@ -126,6 +126,29 @@ taskA(5, 1).then((a_res) => {
 
 ```
 
+> 에러 처리 방법
+
+<br /> 1. then()의 두 번째 인자로 에러를 처리할 수 있다.
+<br />
+
+```javascript
+taskA(5, 1).then((a_res,) => {
+    console.log('A result : ', a_res);
+    return taskB(a_res);
+}, err);
+```
+
+<br /> 2. catch()를 이용하는 방법
+
+```javascript
+taskA(5, 1)
+.then((a_res,) => {
+    console.log('A result : ', a_res);
+    return taskB(a_res);
+})
+.catch();
+```
+
 
 <br />
 <br />
